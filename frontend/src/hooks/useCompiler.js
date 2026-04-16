@@ -9,7 +9,7 @@ export function useCompiler(appendOutput) {
     appendOutput("sys:Compiling via JDoodle...");
 
     try {
-      const response = await fetch("http://localhost:5000/compile", {
+      const response = await fetch("https://codepad-b79q.onrender.com/compile", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ code, languageId }),
