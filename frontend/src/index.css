@@ -40,6 +40,13 @@ body {
   background: radial-gradient(circle at 50% 0%, #1e1e2d 0%, var(--bg-base) 100%);
 }
 
+@media (max-width: 1024px) {
+  .app-container {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+}
+
 .editor-section {
   flex: 2;
   display: flex;
@@ -48,6 +55,15 @@ body {
   background: var(--bg-surface);
   box-shadow: 10px 0 30px rgba(0,0,0,0.2);
   z-index: 10;
+}
+
+@media (max-width: 1024px) {
+  .editor-section {
+    flex: none;
+    height: 60vh;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
 }
 
 .editor-header {
@@ -60,6 +76,14 @@ body {
   border-bottom: 1px solid var(--border-color);
 }
 
+@media (max-width: 768px) {
+  .editor-header {
+    flex-direction: column;
+    gap: 16px;
+    padding: 12px;
+  }
+}
+
 .editor-wrapper {
   flex: 1;
   background: var(--bg-surface);
@@ -68,6 +92,13 @@ body {
 .tabs {
   display: flex;
   gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
 }
 
 .tab-btn {
@@ -84,6 +115,7 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+  white-space: nowrap;
 }
 
 .tab-btn:hover {
@@ -135,6 +167,14 @@ body {
   flex-direction: column;
   min-width: 380px;
   background: var(--bg-base);
+}
+
+@media (max-width: 1024px) {
+  .sidebar-section {
+    flex: none;
+    height: 40vh;
+    min-width: 0;
+  }
 }
 
 .panel-title {
